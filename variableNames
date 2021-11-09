@@ -1,0 +1,10 @@
+float _turnSpeed;
+bool levelOver;
+char symbolOne;
+int _cauntLapFinish;
+int GapMove;
+string  enemyName;
+bool heroLost;
+uint lifeСounter;
+long carSpeed;
+ulong armorСounter;
