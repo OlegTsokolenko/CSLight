@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace homework1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int albumSize = 52;
+            int rowSize = 3;
+            int fullRow = albumSize / rowSize;
+            int restPictures = albumSize % rowSize;
+            Console.WriteLine(fullRow);
+            Console.WriteLine(restPictures);
+        }
+    }
+}
