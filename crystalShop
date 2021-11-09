@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace homework1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int goldenCoins;
+            int crystalsCount;
+            int crystalsPrice = 20;
+            bool crystalControl;
+
+            Console.WriteLine("Добро пожалывать в наш магазин!");
+            Console.Write("Сколько у вас монет?:");
+            goldenCoins = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Сегодня продаем криста за " + crystalsPrice + " золотых монет.");
+            Console.Write("Сколько вы хотите купить кристалов:");
+            crystalsCount = Convert.ToInt32(Console.ReadLine());
+
+            //crystalsCount *= Convert.ToInt32(enoughMoney);
+            crystalControl = goldenCoins >= crystalsCount * crystalsPrice;
+            goldenCoins -= crystalsCount * crystalsPrice;
+            crystalsCount *= Convert.ToInt32(crystalControl);
+
+            Console.WriteLine("У вас теперь - " + crystalsCount + " кристалов, и осталось " + goldenCoins * Convert.ToInt32(crystalControl) + " золотых монет.");
+        }
+    }
+}
