@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace homeWork1_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            String userName;
+            String zodiacSign;
+            String profession;
+            String age;
+
+
+            Console.WriteLine("Мы определим ваш истинный знак зодиака по нескольким вопросам");
+            Console.Write("Ваше имя?:");
+            userName = Console.ReadLine();
+            Console.Write("Ваш знак зодиака?:");
+            zodiacSign = Console.ReadLine();
+            Console.Write("Сколько вам лет?:");
+            age = Console.ReadLine();
+            Console.Write("Ваша профессия?:");
+            profession = Console.ReadLine();
+
+
+            Console.WriteLine("Вы не " + zodiacSign +
+                " Ваш истинный знак зодиака - Козерог. Будучи консервативным и рациональным знаком, у Вас одинаково независимый и серьезный подход к личной жизни, " +
+                 userName + " Вы цените правила, организацию и структуру в своей жизни, хотя также способны мыслить нестандартно, когда этого требует ситуация. " +
+                "Козерог а не " + zodiacSign + " редко начинает что - либо, не имея заранее четкого плана, что приводит к тому, что время от времени " +
+                "Вас воспринимают как упрямого человека. " + profession + " знаете, в свои " + age + " лет, чего хотите от жизни, и обязательно получите это.");
+
+        }
+    }
+}
