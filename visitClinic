@@ -13,6 +13,7 @@ namespace homeWork1_1
             int queueLength;
             int timeReceipt = 10;
             int waitingTime;
+            int timeUnits = 60; //В одном часе - 60 минут
 
             Console.WriteLine("Добро пожалывать в нашу поликлинику!");
             Console.Write("Сколько вы видите старушек в очереди?:");
@@ -20,7 +21,7 @@ namespace homeWork1_1
 
             waitingTime = (queueLength * timeReceipt);
 
-            Console.WriteLine("Вы должны отстоять в очереди " + waitingTime / 60 + " часа и " + waitingTime % 60 + " минут.");
+            Console.WriteLine("Вы должны отстоять в очереди " + waitingTime / timeUnits + " часа и " + waitingTime % timeUnits + " минут.");
         }
     }
 }
