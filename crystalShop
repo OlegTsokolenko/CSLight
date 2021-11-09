@@ -21,8 +21,7 @@ namespace homework1
             Console.WriteLine("Сегодня продаем криста за " + crystalsPrice + " золотых монет.");
             Console.Write("Сколько вы хотите купить кристалов:");
             crystalsCount = Convert.ToInt32(Console.ReadLine());
-
-            //crystalsCount *= Convert.ToInt32(enoughMoney);
+            
             crystalControl = goldenCoins >= crystalsCount * crystalsPrice;
             goldenCoins -= crystalsCount * crystalsPrice;
             crystalsCount *= Convert.ToInt32(crystalControl);
