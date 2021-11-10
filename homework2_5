@@ -10,7 +10,6 @@ namespace homework2_5
     {
         static void Main(string[] args)
         {
- 
             int firstElement = 7;
             int lastElement = 98;
             int step = 7;
