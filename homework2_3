@@ -55,7 +55,6 @@ namespace homework2_3
                         Console.WriteLine("Недопустимое кол-во рублей");
                     }
                     break;
-
                 case "2":
                     Console.WriteLine("Сколько вы хотите обменять доллоров: ");
                     currencyCount = Convert.ToSingle(Console.ReadLine());
@@ -69,7 +68,6 @@ namespace homework2_3
                         Console.WriteLine("Недопустимое кол-во доллоров");
                     }
                     break;
-
                 case "3":
                     Console.WriteLine("Сколько вы хотите обменять рублей: ");
                     currencyCount = Convert.ToSingle(Console.ReadLine());
@@ -83,7 +81,6 @@ namespace homework2_3
                         Console.WriteLine("Недопустимое кол-во рублей");
                     }
                     break;
-
                 case "4":
                     Console.WriteLine("Сколько вы хотите обменять доллоров: ");
                     currencyCount = Convert.ToSingle(Console.ReadLine());
@@ -97,7 +94,6 @@ namespace homework2_3
                         Console.WriteLine("Недопустимое кол-во доллоров");
                     }
                     break;
-
                 case "5":
                     Console.WriteLine("Сколько вы хотите обменять евро: ");
                     currencyCount = Convert.ToSingle(Console.ReadLine());
@@ -111,7 +107,6 @@ namespace homework2_3
                         Console.WriteLine("Недопустимое кол-во евро");
                     }
                     break;
-
                 case "6":
                     Console.WriteLine("Сколько вы хотите обменять евро: ");
                     currencyCount = Convert.ToSingle(Console.ReadLine());
@@ -125,7 +120,6 @@ namespace homework2_3
                         Console.WriteLine("Недопустимое кол-во евро");
                     }
                     break;
-
             }
 
             Console.WriteLine("Ваш баланс " + rub + " рублей, " + usd + " долларов и " + evro + " евро.");
