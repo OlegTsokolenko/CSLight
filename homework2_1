@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace homework2_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int signalСounting;
+
+            Console.WriteLine("Вы приобрели сигнализацию в машину.");
+            Console.Write("Введите количество раз повторения сигнала тревога: ");
+            signalСounting = Convert.ToInt32(Console.ReadLine());
+
+            while (signalСounting-- > 0)
+            {
+                Console.WriteLine("Тревога!!!");
+            }
+        }
+    }
+}
