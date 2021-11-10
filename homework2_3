@@ -44,7 +44,9 @@ namespace homework2_3
             {
                 case "1":
                     Console.WriteLine("Сколько вы хотите обменять рублей: ");
+                    
                     currencyCount = Convert.ToSingle(Console.ReadLine());
+                    
                     if (rub >= currencyCount)
                     {
                         rub -= currencyCount;
@@ -58,7 +60,9 @@ namespace homework2_3
                     
                 case "2":
                     Console.WriteLine("Сколько вы хотите обменять доллоров: ");
+                    
                     currencyCount = Convert.ToSingle(Console.ReadLine());
+                    
                     if (usd >= currencyCount)
                     {
                         usd -= currencyCount;
@@ -72,7 +76,9 @@ namespace homework2_3
                     
                 case "3":
                     Console.WriteLine("Сколько вы хотите обменять рублей: ");
+                    
                     currencyCount = Convert.ToSingle(Console.ReadLine());
+                    
                     if (rub >= currencyCount)
                     {
                         rub -= currencyCount;
@@ -86,7 +92,9 @@ namespace homework2_3
                     
                 case "4":
                     Console.WriteLine("Сколько вы хотите обменять доллоров: ");
+                    
                     currencyCount = Convert.ToSingle(Console.ReadLine());
+                    
                     if (usd >= currencyCount)
                     {
                         usd -= currencyCount;
@@ -100,7 +108,9 @@ namespace homework2_3
                     
                 case "5":
                     Console.WriteLine("Сколько вы хотите обменять евро: ");
+                    
                     currencyCount = Convert.ToSingle(Console.ReadLine());
+                    
                     if (evro >= currencyCount)
                     {
                         evro -= currencyCount;
@@ -114,7 +124,9 @@ namespace homework2_3
                     
                 case "6":
                     Console.WriteLine("Сколько вы хотите обменять евро: ");
+                    
                     currencyCount = Convert.ToSingle(Console.ReadLine());
+                    
                     if (evro >= currencyCount)
                     {
                         evro -= currencyCount;
