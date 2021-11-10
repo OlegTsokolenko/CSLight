@@ -16,7 +16,7 @@ namespace homework2_1
             Console.Write("Введите количество раз повторения сигнала тревога: ");
             signalСounting = Convert.ToInt32(Console.ReadLine());
 
-            while (signalСounting-- > 0)
+            for (int i = 0; i < signalСounting; i++)
             {
                 Console.WriteLine("Тревога!!!");
             }
