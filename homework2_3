@@ -1,0 +1,134 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace homework2_3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            float rubToUsd = 0.014f;
+            float usdToRub = 70.94f;
+            float rubToEvro = 0.012f;
+            float usdToEvro = 0.87f;
+            float evroToRub = 81.81f;
+            float evroToUsd = 1.15f;
+            float rub;
+            float usd;
+            float evro;
+            string userInput;
+            float currencyCount;
+
+            Console.Write("Введите баланс рублей: ");
+            rub = Convert.ToSingle(Console.ReadLine());
+
+            Console.Write("Введите баланс долларов: ");
+            usd = Convert.ToSingle(Console.ReadLine());
+
+            Console.Write("Введите баланс евро: ");
+            evro = Convert.ToSingle(Console.ReadLine());
+
+            Console.WriteLine("Добро пожаловать в обменник валют. У нас вы можете обменять: ");
+            Console.WriteLine("Рубли на Доллары введите - 1");
+            Console.WriteLine("Доллары на Рубли введите - 2");
+            Console.WriteLine("Рубли на Евро введите - 3");
+            Console.WriteLine("Доллары на Евро введите - 4");
+            Console.WriteLine("Евро на Рубли введите - 5");
+            Console.WriteLine("Евро на Доллары введите - 6");
+            userInput = Console.ReadLine();
+
+            switch (userInput)
+            {
+                case "1":
+                    Console.WriteLine("Сколько вы хотите обменять рублей: ");
+                    currencyCount = Convert.ToSingle(Console.ReadLine());
+                    if (rub >= currencyCount)
+                    {
+                        rub -= currencyCount;
+                        usd += currencyCount * rubToUsd;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Недопустимое кол-во рублей");
+                    }
+                    break;
+
+                case "2":
+                    Console.WriteLine("Сколько вы хотите обменять доллоров: ");
+                    currencyCount = Convert.ToSingle(Console.ReadLine());
+                    if (usd >= currencyCount)
+                    {
+                        usd -= currencyCount;
+                        rub += currencyCount * usdToRub;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Недопустимое кол-во доллоров");
+                    }
+                    break;
+
+                case "3":
+                    Console.WriteLine("Сколько вы хотите обменять рублей: ");
+                    currencyCount = Convert.ToSingle(Console.ReadLine());
+                    if (rub >= currencyCount)
+                    {
+                        rub -= currencyCount;
+                        evro += currencyCount * rubToEvro;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Недопустимое кол-во рублей");
+                    }
+                    break;
+
+                case "4":
+                    Console.WriteLine("Сколько вы хотите обменять доллоров: ");
+                    currencyCount = Convert.ToSingle(Console.ReadLine());
+                    if (usd >= currencyCount)
+                    {
+                        usd -= currencyCount;
+                        evro += currencyCount * usdToEvro;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Недопустимое кол-во доллоров");
+                    }
+                    break;
+
+                case "5":
+                    Console.WriteLine("Сколько вы хотите обменять евро: ");
+                    currencyCount = Convert.ToSingle(Console.ReadLine());
+                    if (evro >= currencyCount)
+                    {
+                        evro -= currencyCount;
+                        rub += currencyCount * evroToRub;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Недопустимое кол-во евро");
+                    }
+                    break;
+
+                case "6":
+                    Console.WriteLine("Сколько вы хотите обменять евро: ");
+                    currencyCount = Convert.ToSingle(Console.ReadLine());
+                    if (evro >= currencyCount)
+                    {
+                        evro -= currencyCount;
+                        usd += currencyCount * evroToUsd;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Недопустимое кол-во евро");
+                    }
+                    break;
+
+            }
+
+            Console.WriteLine("Ваш баланс " + rub + " рублей, " + usd + " долларов и " + evro + " евро.");
+        }
+    }
+}
