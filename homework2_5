@@ -10,9 +10,14 @@ namespace homework2_5
     {
         static void Main(string[] args)
         {
-            for (int i = 1; i < 15; i++) 
+ 
+            int firstElement = 7;
+            int lastElement = 98;
+            int step = 7;
+
+            for (int i = firstElement; i <= lastElement; i+= step) 
             {
-                Console.WriteLine(i*7);
+                Console.WriteLine(i);
             }
         }
     }
