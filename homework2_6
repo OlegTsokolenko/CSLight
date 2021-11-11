@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace homework2_6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string userName;
+            char symbolOne;
+            string lineCharacter;
+
+            Console.Write("Введите ваше имя: ");
+            userName = Console.ReadLine();
+            
+            Console.Write("Введите один символ: ");
+            symbolOne = Convert.ToChar(Console.ReadLine());
+
+            lineCharacter = new String(symbolOne, userName.Length);
+
+            Console.WriteLine(symbolOne + lineCharacter + symbolOne);
+            Console.WriteLine(symbolOne + userName + symbolOne);
+            Console.WriteLine(symbolOne + lineCharacter + symbolOne);
+        }
+    }
+}
