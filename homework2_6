@@ -12,7 +12,7 @@ namespace homework2_6
         {
             string userName;
             char symbolOne;
-            string lineCharacter;
+            string lineSymbol;
 
             Console.Write("Введите ваше имя: ");
             userName = Console.ReadLine();
@@ -20,11 +20,11 @@ namespace homework2_6
             Console.Write("Введите один символ: ");
             symbolOne = Convert.ToChar(Console.ReadLine());
 
-            lineCharacter = new String(symbolOne, userName.Length);
+            lineSymbol = new String(symbolOne, userName.Length + 2);
 
-            Console.WriteLine(symbolOne + lineCharacter + symbolOne);
+            Console.WriteLine(lineSymbol);
             Console.WriteLine(symbolOne + userName + symbolOne);
-            Console.WriteLine(symbolOne + lineCharacter + symbolOne);
+            Console.WriteLine(lineSymbol);
         }
     }
 }
