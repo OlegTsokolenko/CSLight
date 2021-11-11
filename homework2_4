@@ -55,7 +55,6 @@ namespace homework2_4
                 if (escMenu == "Esc")
                 {
                     menuСontrol = false;
-                    break;
                 }
             }
         }
