@@ -1,0 +1,63 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace homework2_4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            bool menuСontrol = true;
+            string userName;
+            string changeConsoleColor;
+            string userPassword;
+            string escMenu;
+
+            Console.WriteLine("Меню регистрации и настройки");
+
+            while (menuСontrol == true)
+            {
+                Console.Write("Введите имя: ");
+                userName = Console.ReadLine();
+                
+                Console.Write("Ведите название цвет меню «Red», «Yellow», «Green»: ");
+                changeConsoleColor = Console.ReadLine();
+
+                if (changeConsoleColor == "Red")
+                {
+                    Console.BackgroundColor = ConsoleColor.Red;
+                }
+                else if (changeConsoleColor == "Yellow")
+                {
+                    Console.BackgroundColor = ConsoleColor.Yellow;
+                }
+                else if (changeConsoleColor == "Green")
+                {
+                    Console.BackgroundColor = ConsoleColor.Green;
+                }
+
+                Console.Clear();
+
+                Console.Write("Введите пароль: ");
+                userPassword = Console.ReadLine();
+
+                if (userName != null)
+                {
+                    Console.WriteLine("Ваше имя: " + userName);
+                }
+
+                Console.Write("Для выхода из меню введите Esc: ");
+                escMenu = Console.ReadLine();
+ 
+                if (escMenu == "Esc")
+                {
+                    menuСontrol = false;
+                    break;
+                }
+            }
+        }
+    }
+}
