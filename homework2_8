@@ -1,0 +1,77 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace homework2_8
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random rand = new Random();
+            float healthMagus = rand.Next(250, 350);
+            int damageMagus;
+            int spellsMagus;
+            bool spellsRashamon = false;
+            float healthBoss = rand.Next(3000, 4000);
+            int damageBoss = rand.Next(100, 150);
+
+            //Console.WriteLine("Маг - " + healthMagus + "хп, " + damageMagus + "Макс. урон");
+           // Console.WriteLine("Бос - " + healthBoss + "хп, " + damageBoss + "Макс. урон");
+
+            while (healthMagus > 0 && healthBoss > 0)
+            {
+                spellsMagus = rand.Next(1, 4);
+
+                if (spellsMagus == 1)
+                {
+                    Console.WriteLine("Заклинание мага Рашамон");
+                    damageMagus = 150;
+                    healthMagus += 100;
+                    healthBoss -= Convert.ToSingle(rand.Next(0, damageMagus));
+                    spellsRashamon = true;
+                }
+                else if(spellsMagus == 2 && spellsRashamon == true)
+                {
+                    Console.WriteLine("Заклинание мага Хуганзакура");
+                    damageMagus = 100;
+                    healthBoss -= Convert.ToSingle(rand.Next(0, damageMagus));
+                    spellsRashamon = false;
+                }
+                else if (spellsMagus == 3)
+                {
+                    Console.WriteLine("Заклинание мага Межпространственный разлом");
+                    damageMagus = 250;
+                    healthMagus += 250;
+                    healthBoss -= Convert.ToSingle(rand.Next(0, damageMagus));
+                }
+                else if (spellsMagus == 4)
+                {
+                    Console.WriteLine("Заклинание мага Волшебная стрела");
+                    damageMagus = rand.Next(5, 50);
+                    healthBoss -= Convert.ToSingle(rand.Next(0, damageMagus));
+                }
+
+                healthMagus -= Convert.ToSingle(damageBoss);
+
+                Console.WriteLine("Маг - " + healthMagus);
+                Console.WriteLine("Бос - " + healthBoss);
+            }
+
+            if (healthMagus <= 0 && healthBoss <= 0)
+            {
+                Console.WriteLine("Ничья, оба мертвы.");
+            }
+            else if (healthMagus <= 0)
+            {
+                Console.WriteLine("Маг пал!!!");
+            }
+            else if (healthBoss <= 0)
+            {
+                Console.WriteLine("Бос пал!!");
+            }
+        }
+    }
+}
