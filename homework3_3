@@ -16,19 +16,16 @@ namespace homework3_3
             for (int i = 0; i < array.Length; i++)
             {
                 array[i] = random.Next(10, 100);
-                Console.Write(array[i] + " ");
+                Console.Write(array[i] + " " + " ");
             }
 
-            for (int j = 0; j < array.Length; j++)
+            for (int j = 1; j < array.Length - 1; j++)
             {  
-                if (j > 0 && j < array.Length - 1)
+                if (array[j] > array[j + 1] && array[j] > array[j - 1])
                 {
-                    if (array[j] > array[j + 1] && array[j] > array[j - 1])
-                    {
-                        Console.Write(array[j] + " ");
-                        Console.WriteLine();
-                    }
-                }      
+                    Console.Write(array[j] + " ");
+                    Console.WriteLine();
+                }   
             }
             
             if (array[0] > array[1])
