@@ -34,13 +34,13 @@ namespace homework3_3
             if (array[0] > array[1])
             {
                 Console.Write(array[0] + " ");
-                Console.WriteLine("Privet");
+                Console.WriteLine();
             }
 
             if (array[array.Length - 1] > array[array.Length - 2])
             {
                 Console.Write((array[array.Length - 1]) + " ");
-                Console.WriteLine("Пока");
+                Console.WriteLine();
             }
         }
     }
