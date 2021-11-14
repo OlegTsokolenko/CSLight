@@ -21,30 +21,26 @@ namespace homework3_3
 
             for (int j = 0; j < array.Length; j++)
             {  
-                if (j == 0)
-                {
-                    if (array[0] > array[1])
-                    {
-                        Console.Write(array[0] + " ");
-                        Console.WriteLine();
-                    }
-                }
-                else if (j > 0 && j < array.Length - 1)
+                if (j > 0 && j < array.Length - 1)
                 {
                     if (array[j] > array[j + 1] && array[j] > array[j - 1])
                     {
                         Console.Write(array[j] + " ");
                         Console.WriteLine();
                     }
-                }
-                else if (j == array.Length)
-                {
-                    if (array[array.Length] > array[array.Length - 1])
-                    {
-                        Console.Write(array[array.Length] + " ");
-                        Console.WriteLine();
-                    }
-                }          
+                }      
+            }
+            
+            if (array[0] > array[1])
+            {
+                Console.Write(array[0] + " ");
+                Console.WriteLine("Privet");
+            }
+
+            if (array[array.Length - 1] > array[array.Length - 2])
+            {
+                Console.Write((array[array.Length - 1]) + " ");
+                Console.WriteLine("Пока");
             }
         }
     }
