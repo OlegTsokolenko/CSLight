@@ -1,0 +1,68 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace homework3_4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] array = new int[0];
+            int sum = 0;
+            bool bisPayment = true;
+
+            while (bisPayment)
+            {
+
+                Console.WriteLine("Расчет суммы.");
+                Console.WriteLine("\n1 - Введите число: \n\n2 - Показать сумму. \n\n3 - Выход.");
+                Console.Write("Введите пункт меню:");
+
+                switch (Convert.ToInt32(Console.ReadLine()))
+                {
+                    case 1:
+                        
+                        int number;
+                        Console.Write("Введите число:");
+                        number = Convert.ToInt32(Console.ReadLine());
+ 
+                        int[] tempArray = new int[array.Length + 1];
+
+                        for (int i = 0; i < array.Length; i++)
+                        {
+                            tempArray[i] = array[i]; 
+                        }
+
+                        tempArray[tempArray.Length - 1] = number;
+                        array = tempArray;
+
+                        for (int i = 0; i < array.Length; i++)
+                        {
+                            Console.Write(array[i] + " " + " ");
+                        }
+
+                        break;
+
+                    case 2:
+                        
+                        for (int i = 0; i < array.Length; i++)
+                        {
+                            sum += array[i];
+                        }
+
+                        Console.WriteLine(sum);
+                        break;
+
+                    case 3:
+                        bisPayment = false;
+                        break;
+                }
+
+                Console.Clear();
+            }
+        }
+    }
+}
